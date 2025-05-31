@@ -31,6 +31,8 @@ names.forEach((name, index) => {
   console.log(`${name} (${province})`);
 });
 
+
+
 //.2 Uppercase Transformation: Use map to create a new array of province names in all uppercase. 
 
 const upperCaseProvinces = provinces.map(province => province.toUpperCase());
@@ -39,7 +41,17 @@ const upperCaseProvinces = provinces.map(province => province.toUpperCase());
 
 console.log(upperCaseProvinces);
 
+
+
 //.3 Name Lengths: Create a new array using map that contains the length of each name.
+
+const nameLengths = names.map(name => name.length);
+
+//Log the new array to the console
+
+console.log(nameLengths);
+
+
 
 //.4 Sorting: Use sort to alphabetically sort the provinces.
 
