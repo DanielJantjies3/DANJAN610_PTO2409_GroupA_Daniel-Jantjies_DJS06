@@ -102,9 +102,21 @@ console.log(
 );   //Contained the logic in a single-statement. Passing the check and logging the result of the filter directly, instead of storing it in a variable.
 
 
-//.3 Price Manipulation: Filter out products without prices, convert string prices to numbers, and calculate the total price using reduce.
+//.3 Price Manipulation: Filter out products without prices, 
+
+
+// convert string prices to numbers, and
+
+
+
+//  calculate the total price using reduce.
+
 
 //.4 Concatenate Product Names: Use reduce to concatenate all product names into a single string.
+
+const concatenatedProducts = products.reduce((acc, curr) => 
+    acc ? `${acc} ${curr.product}` : curr.product, 
+'');
 
 //.5 Find Extremes in Prices: Identify the highest and lowest-priced items, returning a string formatted as "Highest: X. Lowest: Y."
 
