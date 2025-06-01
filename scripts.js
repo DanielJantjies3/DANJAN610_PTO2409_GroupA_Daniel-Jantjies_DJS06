@@ -102,10 +102,7 @@ console.log(
 );   //Contained the logic in a single-statement. Passing the check and logging the result of the filter directly, instead of storing it in a variable.
 
 
-//.3 Price Manipulation: Filter out products without prices, 
-
-
-// convert string prices to numbers, and
+//.3 Price Manipulation: Filter out products without prices, and convert string prices to numbers,
 
 
 
@@ -121,4 +118,13 @@ const concatenatedProducts = products.reduce((acc, curr) =>
 //.5 Find Extremes in Prices: Identify the highest and lowest-priced items, returning a string formatted as "Highest: X. Lowest: Y."
 
 //.6 Object Transformation: Using Object.entries and reduce, recreate the products object with keys 'name' and 'cost', maintaining their original values.
+
+const transformedProducts = Object.entries(products).reduce((acc, [index, item]) => {
+  acc.push({ 
+    name: item.product, 
+    cost: item.price 
+  });
+  return acc;
+}, []);
+
 
