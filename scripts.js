@@ -78,6 +78,8 @@ const containsS = names.map(name =>
 
 console.log(containsS);
 
+
+
 //.7 Creating Object Mapping: Use reduce to transform the names array into an object mapping names to their respective provinces.
 
 const nameToProvince = names.reduce((obj, name, index) => {
@@ -104,9 +106,17 @@ console.log(
 
 //.3 Price Manipulation: Filter out products without prices, and convert string prices to numbers,
 
-
+const validProducts = products.filter(product => {
+  const priceStr = String(product.price).trim();
+  return priceStr !== '' && !isNaN(priceStr);
+}).map(product => ({
+  ...product,
+  price: Number(String(product.price).trim())
+}));
 
 //  calculate the total price using reduce.
+
+const totalPrice = validProducts.reduce((sum, product) => sum + product.price, 0);
 
 
 //.4 Concatenate Product Names: Use reduce to concatenate all product names into a single string.
