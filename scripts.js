@@ -97,6 +97,11 @@ products.forEach(item => console.log(item.product));
 
 //.2 Filter by Name Length: Filter out products with names longer than 5 characters.
 
+console.log(
+  products.filter(item => item.product.length <= 5)
+);   //Contained the logic in a single-statement. Passing the check and logging the result of the filter directly, instead of storing it in a variable.
+
+
 //.3 Price Manipulation: Filter out products without prices, convert string prices to numbers, and calculate the total price using reduce.
 
 //.4 Concatenate Product Names: Use reduce to concatenate all product names into a single string.
